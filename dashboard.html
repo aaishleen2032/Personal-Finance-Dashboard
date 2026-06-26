@@ -1,30 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>PERSONAL FINANCE DASHBOARD</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body><!--ctc calculator-->
-        <h2>CTC Calculator</h2>
-        <input type="number" id="ctc" placeholder="Enter CTC">
-        <button id="calculate">calculate</button>
-        <div id="result"></div>
-        <hr>
-        <!--job offer comparator-->
-        <h2>Offer Comparator</h2>
-        <h3>Offer A</h3>
-        <input type="number" id="ctc1" placeholder="CTC">
-        <input type="number" id="bonus1" placeholder="Joining bonus">
-        <br><br>
-        <h3>Offer B</h3>
-        <input type="number" id="ctc2" placeholder="Enter CTC">
-        <INPUT TYPE="number" id="bonus2" placeholder="Joining Bonus">
-            <br><br>
-        <button id="compare">Compare Offers</button>
-        <div id="compareResult"></div>    
-          
-        <script src="script.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Dashboard</title>
+</head>
 
+<body>
+
+    <!-- CTC Calculator -->
+    <h2>CTC Calculator</h2>
+
+    <input type="number" id="ctc" placeholder="Enter Annual CTC">
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result"></div>
+
+    <hr>
+
+    <!-- OFFER COMPARATOR -->
+
+    <h2>Job Offer Comparator</h2>
+
+    <!-- OFFER A -->
+
+    <h3>Offer A</h3>
+
+    <input type="number" id="ctc1" placeholder="Annual CTC"><br><br>
+
+    <input type="number" id="bonus1" placeholder="Joining Bonus"><br><br>
+
+    <input type="number" id="esop1" placeholder="ESOP Value"><br><br>
+
+    <label><b>City</b></label><br>
+
+    <select id="city1">
+        <option>Remote</option>
+        <option>Hyderabad</option>
+        <option>Pune</option>
+        <option>Delhi</option>
+        <option>Noida</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Mumbai</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Growth Opportunity</b></label><br>
+
+    <select id="growth1">
+        <option value="10">Excellent</option>
+        <option value="8">Good</option>
+        <option value="6">Average</option>
+        <option value="4">Poor</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Company Rating</b></label><br>
+
+    <select id="rating1">
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Benefits</b></label><br>
+
+    <label><input type="checkbox" class="benefitA" value="2"> Health Insurance</label><br>
+
+    <label><input type="checkbox" class="benefitA" value="2"> Free Meals</label><br>
+
+    <label><input type="checkbox" class="benefitA" value="2"> Internet Reimbursement</label><br>
+
+    <label><input type="checkbox" class="benefitA" value="1"> Cab Facility</label><br>
+
+    <label><input type="checkbox" class="benefitA" value="2"> Gym Membership</label><br>
+
+    <label><input type="checkbox" class="benefitA" value="1"> Flexible Working Hours</label>
+
+    <hr>
+
+    <!-- OFFER B -->
+
+    <h3>Offer B</h3>
+
+    <input type="number" id="ctc2" placeholder="Annual CTC"><br><br>
+
+    <input type="number" id="bonus2" placeholder="Joining Bonus"><br><br>
+
+    <input type="number" id="esop2" placeholder="ESOP Value"><br><br>
+
+    <label><b>City</b></label><br>
+
+    <select id="city2">
+        <option>Remote</option>
+        <option>Hyderabad</option>
+        <option>Pune</option>
+        <option>Delhi</option>
+        <option>Noida</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Mumbai</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Growth Opportunity</b></label><br>
+
+    <select id="growth2">
+        <option value="10">Excellent</option>
+        <option value="8">Good</option>
+        <option value="6">Average</option>
+        <option value="4">Poor</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Company Rating</b></label><br>
+
+    <select id="rating2">
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+    </select>
+
+    <br><br>
+
+    <label><b>Benefits</b></label><br>
+    <label><input type="checkbox" class="benefitB" value="2"> Health Insurance</label><br>
+    <label><input type="checkbox" class="benefitB" value="2"> Free Meals</label><br>
+    <label><input type="checkbox" class="benefitB" value="2"> Internet Reimbursement</label><br>
+    <label><input type="checkbox" class="benefitB" value="1"> Cab Facility</label><br>
+    <label><input type="checkbox" class="benefitB" value="2"> Gym Membership</label><br>
+    <label><input type="checkbox" class="benefitB" value="1"> Flexible Working Hours</label>
+    <br><br>
+    <button id="compare">Compare Offers</button>
+    <hr>
+    <div id="compareResult"></div>
+    <script src="script.js"></script>
+    <script src="offercomparator.js"></script>
+</body>
 </html>
