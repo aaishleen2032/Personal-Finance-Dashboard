@@ -145,7 +145,43 @@
     <button id="compare">Compare Offers</button>
     <hr>
     <div id="compareResult"></div>
+    <hr>
+
+<!-- emicalculator -->
+
+<h2>EMI Calculator</h2>
+<label><b>Loan Type</b></label><br>
+<select id="loanType">
+    <option>Home Loan</option>
+    <option>Car Loan</option>
+    <option>Personal Loan</option>
+    <option>Education Loan</option>
+    <option>Business Loan</option>
+</select>
+<br><br>
+<input
+type="number"
+id="loanAmount"
+placeholder="Loan Amount"
+min="1">
+<br><br>
+<input
+type="number"
+id="interestRate"
+placeholder="Interest Rate (%)"
+step="0.01">
+<br><br>
+<input
+type="number"
+id="loanTenure"
+placeholder="Loan Tenure (Years)">
+<br><br>
+<button id="calculateEMI">
+Calculate EMI
+</button>
+<div id="emiResult"></div>
     <script src="script.js"></script>
     <script src="offercomparator.js"></script>
+    <script src="emicalculator.js"></script>
 </body>
 </html>
