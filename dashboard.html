@@ -1,187 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Finance Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-base-200 min-h-screen p-6">
 
-<body>
+  <div class="max-w-5xl mx-auto space-y-8">
 
-    <!-- CTC Calculator -->
-    <h2>CTC Calculator</h2>
+    <!-- Page Header -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-primary">Personal Finance Dashboard</h1>
+      <p class="text-base-content/60 mt-1">CTC breakdown · Offer comparison · EMI planner</p>
+    </div>
 
-    <input type="number" id="ctc" placeholder="Enter Annual CTC">
+    <!--CTC CALCULATOR-->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title text-2xl">
+          <span class="text-primary"></span> CTC Calculator
+        </h2>
+        <p class="text-base-content/60 text-sm mb-4">Break down your annual CTC into take-home salary</p>
 
-    <button id="calculate">Calculate</button>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input
+            type="number"
+            id="ctc"
+            placeholder="Enter Annual CTC (₹)"
+            class="input input-bordered flex-1"
+          />
+          <button id="calculate" class="btn btn-primary">Calculate</button>
+        </div>
 
-    <div id="result"></div>
+        <div id="result" class="mt-4"></div>
+      </div>
+    </div>
 
-    <hr>
+    <!--JOB OFFER COMPARATOR -->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title text-2xl">
+          <span class="text-primary"></span> Job Offer Comparator
+        </h2>
+        <p class="text-base-content/60 text-sm mb-6">Compare two offers side-by-side including perks and location</p>
 
-    <!-- OFFER COMPARATOR -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <h2>Job Offer Comparator</h2>
+          <!-- Offer A -->
+          <div class="border border-base-300 rounded-xl p-5 space-y-4">
+            <h3 class="font-bold text-lg text-primary">Offer A</h3>
 
-    <!-- OFFER A -->
+            <div class="form-control">
+              <label class="label"><span class="label-text">Annual CTC (₹)</span></label>
+              <input type="number" id="ctc1" placeholder="e.g. 1200000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Joining Bonus (₹)</span></label>
+              <input type="number" id="bonus1" placeholder="e.g. 100000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">ESOP Value (₹)</span></label>
+              <input type="number" id="esop1" placeholder="e.g. 500000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">City</span></label>
+              <select id="city1" class="select select-bordered select-sm">
+                <option>Remote</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+                <option>Delhi</option>
+                <option>Noida</option>
+                <option>Chennai</option>
+                <option>Bangalore</option>
+                <option>Mumbai</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Growth Opportunity</span></label>
+              <select id="growth1" class="select select-bordered select-sm">
+                <option value="10">Excellent</option>
+                <option value="8">Good</option>
+                <option value="6">Average</option>
+                <option value="4">Poor</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Company Rating</span></label>
+              <select id="rating1" class="select select-bordered select-sm">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Benefits</span></label>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="2" /><span class="text-sm">Health Insurance</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="2" /><span class="text-sm">Free Meals</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="2" /><span class="text-sm">Internet Reimbursement</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="1" /><span class="text-sm">Cab Facility</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="2" /><span class="text-sm">Gym Membership</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitA" value="1" /><span class="text-sm">Flexible Working Hours</span></label>
+              </div>
+            </div>
+          </div>
 
-    <h3>Offer A</h3>
+          <!-- Offer B -->
+          <div class="border border-base-300 rounded-xl p-5 space-y-4">
+            <h3 class="font-bold text-lg text-secondary">Offer B</h3>
 
-    <input type="number" id="ctc1" placeholder="Annual CTC"><br><br>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Annual CTC (₹)</span></label>
+              <input type="number" id="ctc2" placeholder="e.g. 1400000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Joining Bonus (₹)</span></label>
+              <input type="number" id="bonus2" placeholder="e.g. 50000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">ESOP Value (₹)</span></label>
+              <input type="number" id="esop2" placeholder="e.g. 300000" class="input input-bordered input-sm" />
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">City</span></label>
+              <select id="city2" class="select select-bordered select-sm">
+                <option>Remote</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+                <option>Delhi</option>
+                <option>Noida</option>
+                <option>Chennai</option>
+                <option>Bangalore</option>
+                <option>Mumbai</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Growth Opportunity</span></label>
+              <select id="growth2" class="select select-bordered select-sm">
+                <option value="10">Excellent</option>
+                <option value="8">Good</option>
+                <option value="6">Average</option>
+                <option value="4">Poor</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Company Rating</span></label>
+              <select id="rating2" class="select select-bordered select-sm">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Benefits</span></label>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="2" /><span class="text-sm">Health Insurance</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="2" /><span class="text-sm">Free Meals</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="2" /><span class="text-sm">Internet Reimbursement</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="1" /><span class="text-sm">Cab Facility</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="2" /><span class="text-sm">Gym Membership</span></label>
+                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="checkbox checkbox-sm benefitB" value="1" /><span class="text-sm">Flexible Working Hours</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <input type="number" id="bonus1" placeholder="Joining Bonus"><br><br>
+        <div class="mt-6 flex justify-center">
+          <button id="compare" class="btn btn-primary btn-wide">Compare Offers</button>
+        </div>
+        <div id="compareResult" class="mt-4"></div>
+      </div>
+    </div>
 
-    <input type="number" id="esop1" placeholder="ESOP Value"><br><br>
+    <!-- EMI CALCULATOR-->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title text-2xl">
+          <span class="text-primary"></span> EMI Calculator
+        </h2>
+        <p class="text-base-content/60 text-sm mb-4">Calculate monthly EMI with full amortization schedule</p>
 
-    <label><b>City</b></label><br>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="form-control">
+            <label class="label"><span class="label-text">Loan Type</span></label>
+            <select id="loanType" class="select select-bordered">
+              <option>Home Loan</option>
+              <option>Car Loan</option>
+              <option>Personal Loan</option>
+              <option>Education Loan</option>
+              <option>Business Loan</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Loan Amount (₹)</span></label>
+            <input type="number" id="loanAmount" placeholder="e.g. 5000000" min="1" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Interest Rate (%)</span></label>
+            <input type="number" id="interestRate" placeholder="e.g. 8.5" step="0.01" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Loan Tenure (Years)</span></label>
+            <input type="number" id="loanTenure" placeholder="e.g. 20" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Amortization View</span></label>
+            <select id="scheduleType" class="select select-bordered">
+              <option value="1">Monthly</option>
+              <option value="6">Every 6 Months</option>
+              <option value="12" selected>Yearly</option>
+            </select>
+          </div>
+        </div>
 
-    <select id="city1">
-        <option>Remote</option>
-        <option>Hyderabad</option>
-        <option>Pune</option>
-        <option>Delhi</option>
-        <option>Noida</option>
-        <option>Chennai</option>
-        <option>Bangalore</option>
-        <option>Mumbai</option>
-    </select>
+        <div class="mt-5">
+          <button id="calculateEMI" class="btn btn-primary btn-wide">Calculate EMI</button>
+        </div>
+        <div id="emiResult" class="mt-6"></div>
+      </div>
+    </div>
 
-    <br><br>
+    <!-- Footer -->
+    <p class="text-center text-base-content/40 text-xs pb-4">Personal Finance Dashboard — for informational purposes only</p>
 
-    <label><b>Growth Opportunity</b></label><br>
+  </div><!-- /max-w -->
 
-    <select id="growth1">
-        <option value="10">Excellent</option>
-        <option value="8">Good</option>
-        <option value="6">Average</option>
-        <option value="4">Poor</option>
-    </select>
-
-    <br><br>
-
-    <label><b>Company Rating</b></label><br>
-
-    <select id="rating1">
-        <option value="5">★★★★★</option>
-        <option value="4">★★★★☆</option>
-        <option value="3">★★★☆☆</option>
-        <option value="2">★★☆☆☆</option>
-        <option value="1">★☆☆☆☆</option>
-    </select>
-
-    <br><br>
-
-    <label><b>Benefits</b></label><br>
-
-    <label><input type="checkbox" class="benefitA" value="2"> Health Insurance</label><br>
-
-    <label><input type="checkbox" class="benefitA" value="2"> Free Meals</label><br>
-
-    <label><input type="checkbox" class="benefitA" value="2"> Internet Reimbursement</label><br>
-
-    <label><input type="checkbox" class="benefitA" value="1"> Cab Facility</label><br>
-
-    <label><input type="checkbox" class="benefitA" value="2"> Gym Membership</label><br>
-
-    <label><input type="checkbox" class="benefitA" value="1"> Flexible Working Hours</label>
-
-    <hr>
-
-    <!-- OFFER B -->
-
-    <h3>Offer B</h3>
-
-    <input type="number" id="ctc2" placeholder="Annual CTC"><br><br>
-
-    <input type="number" id="bonus2" placeholder="Joining Bonus"><br><br>
-
-    <input type="number" id="esop2" placeholder="ESOP Value"><br><br>
-
-    <label><b>City</b></label><br>
-
-    <select id="city2">
-        <option>Remote</option>
-        <option>Hyderabad</option>
-        <option>Pune</option>
-        <option>Delhi</option>
-        <option>Noida</option>
-        <option>Chennai</option>
-        <option>Bangalore</option>
-        <option>Mumbai</option>
-    </select>
-
-    <br><br>
-
-    <label><b>Growth Opportunity</b></label><br>
-
-    <select id="growth2">
-        <option value="10">Excellent</option>
-        <option value="8">Good</option>
-        <option value="6">Average</option>
-        <option value="4">Poor</option>
-    </select>
-
-    <br><br>
-
-    <label><b>Company Rating</b></label><br>
-
-    <select id="rating2">
-        <option value="5">★★★★★</option>
-        <option value="4">★★★★☆</option>
-        <option value="3">★★★☆☆</option>
-        <option value="2">★★☆☆☆</option>
-        <option value="1">★☆☆☆☆</option>
-    </select>
-
-    <br><br>
-
-    <label><b>Benefits</b></label><br>
-    <label><input type="checkbox" class="benefitB" value="2"> Health Insurance</label><br>
-    <label><input type="checkbox" class="benefitB" value="2"> Free Meals</label><br>
-    <label><input type="checkbox" class="benefitB" value="2"> Internet Reimbursement</label><br>
-    <label><input type="checkbox" class="benefitB" value="1"> Cab Facility</label><br>
-    <label><input type="checkbox" class="benefitB" value="2"> Gym Membership</label><br>
-    <label><input type="checkbox" class="benefitB" value="1"> Flexible Working Hours</label>
-    <br><br>
-    <button id="compare">Compare Offers</button>
-    <hr>
-    <div id="compareResult"></div>
-    <hr>
-
-<!-- emicalculator -->
-
-<h2>EMI Calculator</h2>
-<label><b>Loan Type</b></label><br>
-<select id="loanType">
-    <option>Home Loan</option>
-    <option>Car Loan</option>
-    <option>Personal Loan</option>
-    <option>Education Loan</option>
-    <option>Business Loan</option>
-</select>
-<br><br>
-<input
-type="number"
-id="loanAmount"
-placeholder="Loan Amount"
-min="1">
-<br><br>
-<input
-type="number"
-id="interestRate"
-placeholder="Interest Rate (%)"
-step="0.01">
-<br><br>
-<input
-type="number"
-id="loanTenure"
-placeholder="Loan Tenure (Years)">
-<br><br>
-<button id="calculateEMI">
-Calculate EMI
-</button>
-<div id="emiResult"></div>
-    <script src="script.js"></script>
-    <script src="offercomparator.js"></script>
-    <script src="emicalculator.js"></script>
+  <script src="script.js"></script>
+  <script src="offercomparator.js"></script>
+  <script src="emicalculator.js"></script>
 </body>
 </html>
