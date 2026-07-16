@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from routers.ctc import router as ctc_router
 from routers.tax import router as tax_router
 from routers.emi import router as emi_router
+from routers.offer import router as offer_router
 
 app = FastAPI()
 
@@ -18,6 +19,7 @@ app.add_middleware(
 app.include_router(ctc_router)
 app.include_router(tax_router)
 app.include_router(emi_router)
+app.include_router(offer_router)
 
 @app.get("/")
 def home():
