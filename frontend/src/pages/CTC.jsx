@@ -2,6 +2,7 @@ import { useState } from "react";
 import api from "../services/api";
 import CTCForm from "../components/CTCForm";
 import CTCResult from "../components/CTCResult";
+import "../styles/CTC.css";
 function CTC() {
     const [ctc, setCtc] = useState("");
     const [result, setResult] = useState(null);
@@ -16,7 +17,7 @@ function CTC() {
         }
     };
     return (
-        <div style={{ padding: "40px" }}>
+        <div className="ctc-page">
             <h1>CTC Calculator</h1>
             <CTCForm
                 ctc={ctc}

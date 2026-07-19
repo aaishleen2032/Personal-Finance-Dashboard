@@ -8,7 +8,7 @@ function CTCResult({ result }) {
         })}`;
 
     return (
-        <div>
+        <div className="ctc-result">
             <h2>Results</h2>
 
             <p>Basic Salary : {formatCurrency(result.basic)}</p>

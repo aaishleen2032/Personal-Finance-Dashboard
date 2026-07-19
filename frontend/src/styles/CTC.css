@@ -1,0 +1,52 @@
+.ctc-page {
+    text-align: center;
+    padding: 50px;
+}
+.ctc-page h1 {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+.ctc-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+.ctc-form input {
+    padding: 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.ctc-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1e3a8a;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.ctc-form button:hover {
+    background: #172554;
+}
+.ctc-result {
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+.ctc-result h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+.ctc-result p {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}

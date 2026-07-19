@@ -1,18 +1,24 @@
 function CTCForm({ ctc, setCtc, calculateCTC }) {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (ctc === "" || Number(ctc) <= 0) {
+            alert("Please enter a valid CTC.");
+            return;
+        }
+        calculateCTC();
+    };
     return (
-        <div>
+        <form className="ctc-form" onSubmit={handleSubmit}>
             <input
                 type="number"
-                placeholder="Enter Annual CTC"
+                placeholder="Enter your annual CTC"
                 value={ctc}
                 onChange={(e) => setCtc(e.target.value)}
             />
-            <br /><br />
-            <button onClick={calculateCTC}>
+            <button type="submit">
                 Calculate
             </button>
-
-        </div>
+        </form>
     );
 }
 export default CTCForm;
