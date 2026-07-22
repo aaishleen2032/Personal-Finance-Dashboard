@@ -1,0 +1,82 @@
+.emi-result {
+    margin-top: 30px;
+}
+.emi-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.emi-card {
+    padding: 20px;
+    min-width: 200px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.emi-card h3 {
+    font-size: 16px;
+}
+.emi-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+.emi-summary {
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    text-align: left;
+}
+
+.emi-summary h2 {
+    color: #1e3a8a;
+    text-align: center;
+}
+
+.emi-summary p {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.schedule-section {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.schedule-section h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.table-container th {
+    background: #1e3a8a;
+    color: white;
+}
+
+.table-container tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.table-container tr:hover {
+    background: #eef2ff;
+}
