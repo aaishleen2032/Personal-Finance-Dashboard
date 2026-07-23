@@ -1,0 +1,131 @@
+.tax-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f5f7fb;
+}
+
+.tax-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tax-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.tax-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tax-form h2 {
+    margin-bottom: 10px;
+}
+
+.tax-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.tax-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tax-form button:hover {
+    background: #1d4ed8;
+}
+
+.tax-result {
+    margin-top: 30px;
+}
+
+.tax-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.tax-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tax-card h4 {
+    margin-bottom: 10px;
+}
+
+.tax-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tax-table {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.tax-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.recommended {
+    color: green;
+}
+
+.saving {
+    font-weight: bold;
+}
+
+.tax-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .tax-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .tax-page {
+        padding: 20px;
+    }
+
+    .tax-stats {
+        grid-template-columns: 1fr;
+    }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+}

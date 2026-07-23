@@ -5,6 +5,7 @@ import CTC from "./pages/CTC";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import EMI from "./pages/EMI";
+import Tax from "./pages/Tax";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/emi" element={<EMI />} />
+        <Route path="/tax" element={<Tax />} />
       </Routes>
     </BrowserRouter>
   );

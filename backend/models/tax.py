@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 class TaxInput(BaseModel):
     salary: float
     otherIncome: float = 0

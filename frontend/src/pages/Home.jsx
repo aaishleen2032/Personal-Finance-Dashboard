@@ -22,28 +22,30 @@ function Home() {
                     <p>Calculate EMI and view your loan amortization schedule.</p>
                 </Link>
 
-                <div className="feature-card">
+                <Link to="/sip" className="feature-card">
                     <h2>SIP Calculator</h2>
                     <p>Plan your investments and estimate future returns.</p>
-                </div>
+                </Link>
 
-                <div className="feature-card">
+                {/* CHANGE THIS */}
+                <Link to="/tax" className="feature-card">
                     <h2>Tax Calculator</h2>
                     <p>Compare your tax liability under different regimes.</p>
-                </div>
+                </Link>
 
-                <div className="feature-card">
+                <Link to="/offer" className="feature-card">
                     <h2>Offer Comparator</h2>
                     <p>Compare job offers based on salary, benefits and location.</p>
-                </div>
+                </Link>
 
-                <div className="feature-card">
+                <Link to="/retirement" className="feature-card">
                     <h2>Retirement Planner</h2>
                     <p>Plan your savings and estimate your retirement corpus.</p>
-                </div>
+                </Link>
 
             </div>
         </div>
     );
 }
+
 export default Home;

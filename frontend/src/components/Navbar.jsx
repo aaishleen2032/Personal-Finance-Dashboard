@@ -1,15 +1,28 @@
+import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav className="navbar">
-            <div className="logo">
+            <Link to="/" className="logo">
                 Finance Dashboard
-            </div>
+            </Link>
             <div className="nav-links">
-                <button className="login-btn">Login</button>
-                <button className="signup-btn">Sign Up</button>
+                <Link to="/ctc">
+                    CTC Calculator
+                </Link>
+                <Link to="/emi">
+                    EMI Calculator
+                </Link>
+                <Link to="/tax">
+                    Tax Calculator
+                </Link>
+                <Link to="/login" className="login-btn">
+                    Login
+                </Link>
+                <Link to="/signup" className="signup-btn">
+                    Sign Up
+                </Link>
             </div>
         </nav>
     );
 }
-
 export default Navbar;
