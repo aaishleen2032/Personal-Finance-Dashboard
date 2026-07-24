@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import EMI from "./pages/EMI";
 import Tax from "./pages/Tax";
-
+import OfferComparator from "./pages/OfferComparator";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +17,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/emi" element={<EMI />} />
         <Route path="/tax" element={<Tax />} />
+        <Route
+    path="/offer"
+    element={<OfferComparator />}
+/>
       </Routes>
     </BrowserRouter>
   );

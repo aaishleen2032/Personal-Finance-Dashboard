@@ -1,0 +1,191 @@
+.offer-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f5f7fb;
+}
+
+.offer-page h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #1e3a8a;
+}
+
+/* Two offer forms */
+.offers-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Individual offer form */
+.offer-form {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.offer-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2563eb;
+}
+
+/* Form fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.form-group label,
+.benefits-section > label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Benefits */
+.benefits-section {
+    margin-top: 20px;
+}
+
+.benefit-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.benefit-option input {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+/* Compare button */
+.compare-button {
+    display: block;
+    margin: 30px auto;
+    padding: 13px 35px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.compare-button:hover {
+    background: #1d4ed8;
+}
+
+/* Error */
+.offer-error {
+    text-align: center;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Result */
+.offer-result {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.offer-result h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+}
+
+/* Comparison table */
+.comparison-table {
+    width: 100%;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: center;
+}
+
+.comparison-row.header {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+.comparison-row span,
+.comparison-row strong {
+    text-align: center;
+}
+
+.comparison-row span:first-child,
+.comparison-row strong:first-child {
+    text-align: left;
+}
+
+/* Overall score */
+.overall-score {
+    background: #eff6ff;
+    font-size: 17px;
+}
+
+/* Winner */
+.winner {
+    margin-top: 25px;
+    padding: 18px;
+    text-align: center;
+    border-radius: 10px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.winner h3 {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .offer-page {
+        padding: 20px;
+    }
+
+    .offers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        font-size: 14px;
+    }
+
+}
