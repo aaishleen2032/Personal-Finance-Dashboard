@@ -1,82 +1,254 @@
-.emi-result {
-    margin-top: 30px;
-}
-.emi-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.emi-card {
-    padding: 20px;
-    min-width: 200px;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.emi-card h3 {
-    font-size: 16px;
-}
-.emi-card p {
-    font-size: 22px;
-    font-weight: bold;
-}
-.emi-summary {
-    width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: white;
-    text-align: left;
-}
+/* Main Page */
 
-.emi-summary h2 {
-    color: #1e3a8a;
-    text-align: center;
-}
+.emi-page {
+    min-height: 100vh;
 
-.emi-summary p {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-.schedule-section {
-    width: 90%;
-    margin: 40px auto;
-}
+    padding: 50px 7% 80px;
 
-.schedule-section h2 {
-    color: #1e3a8a;
-    margin-bottom: 20px;
-}
-
-.table-container {
-    overflow-x: auto;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-}
-
-.table-container table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-}
-
-.table-container th,
-.table-container td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-.table-container th {
-    background: #1e3a8a;
-    color: white;
-}
-
-.table-container tr:nth-child(even) {
     background: #f8fafc;
 }
 
-.table-container tr:hover {
-    background: #eef2ff;
+
+/* Header */
+
+.emi-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.emi-header h1 {
+    font-size: 42px;
+
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.emi-header p {
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* Form */
+
+.emi-form {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1fr
+        1fr
+        auto;
+
+    gap: 15px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Inputs */
+
+.emi-form input,
+.emi-form select {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.emi-form input:focus,
+.emi-form select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Button */
+
+.emi-form button {
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.emi-form button:hover {
+
+    background: #1d4ed8;
+}
+
+
+/* Statistics */
+
+.emi-stats {
+
+    max-width: 1000px;
+
+    margin: 40px auto 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.emi-stat-card {
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.emi-stat-card h3 {
+
+    color: #475569;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.emi-stat-card strong {
+
+    color: #111827;
+
+    font-size: 25px;
+}
+
+
+/* Loan Summary */
+
+.loan-summary {
+
+    max-width: 500px;
+
+    margin: 30px auto 50px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+.loan-summary h2 {
+
+    text-align: center;
+
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+
+.loan-summary p {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #374151;
+}
+
+
+/* Schedule */
+
+.schedule-title {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    color: #1e3a8a;
+
+    font-size: 28px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .emi-form {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .emi-page {
+
+        padding: 30px 15px;
+    }
+
+    .emi-header h1 {
+
+        font-size: 32px;
+    }
+
+    .emi-form {
+
+        grid-template-columns: 1fr;
+    }
+
+    .emi-stats {
+
+        grid-template-columns: 1fr;
+    }
+
 }

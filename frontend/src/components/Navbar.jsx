@@ -1,28 +1,51 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "../styles/Navbar.css";
+
 function Navbar() {
     return (
         <nav className="navbar">
+
             <Link to="/" className="logo">
                 Finance Dashboard
             </Link>
+
+
             <div className="nav-links">
-                <Link to="/ctc">
+
+                <NavLink to="/ctc">
                     CTC Calculator
-                </Link>
-                <Link to="/emi">
+                </NavLink>
+
+                <NavLink to="/emi">
                     EMI Calculator
-                </Link>
-                <Link to="/tax">
+                </NavLink>
+
+                <NavLink to="/tax">
                     Tax Calculator
-                </Link>
-                <Link to="/login" className="login-btn">
+                </NavLink>
+
+                <NavLink to="/offer">
+                    Offer Comparator
+                </NavLink>
+
+                <Link
+                    to="/login"
+                    className="login-btn"
+                >
                     Login
                 </Link>
-                <Link to="/signup" className="signup-btn">
+
+                <Link
+                    to="/signup"
+                    className="signup-btn"
+                >
                     Sign Up
                 </Link>
+
             </div>
+
         </nav>
     );
 }
+
 export default Navbar;

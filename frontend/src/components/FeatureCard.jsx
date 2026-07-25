@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
-
-function FeatureCard({ title, link }) {
+function FeatureCard({ title, description, link }) {
     return (
-        <Link to={link} className="feature-link">
-            <div className="feature-card">
-                <h2>{title}</h2>
-            </div>
+        <Link
+            to={link}
+            className="feature-card"
+        >
+            <h2>
+                {title}
+            </h2>
+            <p>
+                {description}
+            </p>
+            <span className="card-link">
+                Explore Tool →
+            </span>
         </Link>
     );
 }

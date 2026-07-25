@@ -1,127 +1,113 @@
-import { Link } from "react-router-dom";
+import FeatureCard from "../components/FeatureCard";
 import "../styles/Home.css";
-
+const tools = [
+    {
+        title: "CTC Calculator",
+        description:
+            "Calculate your salary breakdown, deductions, tax, and estimated monthly income.",
+        link: "/ctc",
+    },
+    {
+        title: "EMI Calculator",
+        description:
+            "Calculate your monthly EMI and view a detailed loan repayment schedule.",
+        link: "/emi",
+    },
+    {
+        title: "Tax Calculator",
+        description:
+            "Estimate your income tax and compare different tax regime options.",
+        link: "/tax",
+    },
+    {
+        title: "Offer Comparator",
+        description:
+            "Compare two job offers based on salary, bonuses, benefits, and location.",
+        link: "/offer",
+    },
+];
 function Home() {
     return (
-        <div className="home">
-
-            <h1>
-                Personal Finance Dashboard
-            </h1>
-
-            <p>
-                Smart tools to help you make better financial decisions.
-            </p>
-
-
-            <div className="cards">
-
-
-                <Link
-                    to="/ctc"
-                    className="feature-card"
-                >
-
-                    <h2>
-                        CTC Calculator
-                    </h2>
-
+        <main className="home">
+            {/* Hero Section */}
+            <section className="hero">
+                <div className="hero-content">
+                    <h1>
+                        Take Control of
+                        <span> Your Finances</span>
+                    </h1>
                     <p>
-                        Calculate your salary breakdown
-                        and in-hand salary.
+                        Make smarter financial decisions with powerful tools
+                        designed to help you understand your income, loans,
+                        taxes, and job offers.
                     </p>
-
-                </Link>
-
-
-                <Link
-                    to="/emi"
-                    className="feature-card"
-                >
-
+                </div>
+            </section>
+            {/* Finance Tools Section */}
+            <section className="tools-section">
+                <div className="section-heading">
                     <h2>
-                        EMI Calculator
+                        Finance Tools
                     </h2>
-
                     <p>
-                        Calculate EMI and view your loan
-                        amortization schedule.
+                        Simple and powerful tools to help you make better
+                        financial decisions.
                     </p>
-
-                </Link>
-
-
-                <Link
-                    to="/sip"
-                    className="feature-card"
-                >
-
+                </div>
+                <div className="cards">
+                    {tools.map((tool) => (
+                        <FeatureCard
+                            key={tool.link}
+                            title={tool.title}
+                            description={tool.description}
+                            link={tool.link}
+                        />
+                    ))}
+                </div>
+            </section>
+            {/* Dashboard Preview Section */}
+            <section className="dashboard-preview">
+                <div className="preview-content">
                     <h2>
-                        SIP Calculator
+                        Your Personal Finance Dashboard
                     </h2>
-
                     <p>
-                        Plan your investments and estimate
-                        future returns.
+                        Track your net worth, cash flow, investments, loans,
+                        goals, and much more in one place.
                     </p>
-
-                </Link>
-
-
-                <Link
-                    to="/tax"
-                    className="feature-card"
-                >
-                    <h2>
-                        Tax Calculator
-                    </h2>
-
+                    <button>
+                        Coming Soon
+                    </button>
+                </div>
+            </section>
+            {/* Features Section */}
+            <section className="features-section">
+                <div className="feature-item">
+                    <h3>
+                         Track Your Finances
+                    </h3>
                     <p>
-                        Compare your tax liability under
-                        different regimes.
+                        Get a clear overview of your financial health.
                     </p>
-
-                </Link>
-
-
-                <Link
-                    to="/offer"
-                    className="feature-card"
-                >
-
-                    <h2>
-                        Offer Comparator
-                    </h2>
-
+                </div>
+                <div className="feature-item">
+                    <h3>
+                         Set Financial Goals
+                    </h3>
                     <p>
-                        Compare job offers based on salary,
-                        benefits and location.
+                        Plan and track your progress towards your financial goals.
                     </p>
-
-                </Link>
-
-
-                <Link
-                    to="/retirement"
-                    className="feature-card"
-                >
-
-                    <h2>
-                        Retirement Planner
-                    </h2>
-
+                </div>
+                <div className="feature-item">
+                    <h3>
+                         Make Smarter Decisions
+                    </h3>
                     <p>
-                        Plan your savings and estimate your
-                        retirement corpus.
+                        Use data-driven insights to improve your financial future.
                     </p>
-
-                </Link>
-
-
-            </div>
-
-        </div>
+                </div>
+            </section>
+        </main>
     );
 }
-
 export default Home;
