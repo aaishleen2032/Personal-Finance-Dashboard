@@ -4,6 +4,8 @@ from routers.ctc import router as ctc_router
 from routers.tax import router as tax_router
 from routers.emi import router as emi_router
 from routers.offer import router as offer_router
+from database import engine
+from sqlalchemy import text
 
 app = FastAPI()
 
@@ -26,3 +28,9 @@ def home():
     return {
         "message": "Finance Dashboard Backend Running"
     }
+@app.get("/test-db")
+def test_database():
+    with engine.connect() as connection:
+        connection.execute(text("SELECT 1"))
+
+    return {"message": "PostgreSQL connected successfully"}
