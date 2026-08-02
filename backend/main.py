@@ -4,8 +4,10 @@ from routers.ctc import router as ctc_router
 from routers.tax import router as tax_router
 from routers.emi import router as emi_router
 from routers.offer import router as offer_router
-from database import engine
+from database import Base,engine
 from sqlalchemy import text
+from models.user import User
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
