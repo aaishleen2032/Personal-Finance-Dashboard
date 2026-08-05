@@ -9,3 +9,4 @@ class User(Base):
     email = Column(String, unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
     incomes = relationship("Income", back_populates="user")
+    expenses = relationship("Expense", back_populates="user")
