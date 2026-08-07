@@ -8,5 +8,6 @@ class Income(Base):
     source = Column(String, nullable=False)
     amount = Column(Float, nullable=False)
     income_date = Column(Date, nullable=False)
+    notes = Column(String, nullable=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     user = relationship("User", back_populates="incomes")

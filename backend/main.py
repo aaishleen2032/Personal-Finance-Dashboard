@@ -7,6 +7,8 @@ from routers.offer import router as offer_router
 from database import Base,engine
 from sqlalchemy import text
 from models.user import User
+from models.income import Income
+from models.expense import Expense
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
