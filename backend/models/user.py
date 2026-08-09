@@ -10,3 +10,4 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     incomes = relationship("Income", back_populates="user")
     expenses = relationship("Expense", back_populates="user")
+    investments = relationship("Investment", back_populates="user")
