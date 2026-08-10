@@ -9,6 +9,8 @@ from sqlalchemy import text
 from models.user import User
 from models.income import Income
 from models.expense import Expense
+from models.investment import Investment
+from models.loan import Loan
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
