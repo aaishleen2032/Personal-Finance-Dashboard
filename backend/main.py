@@ -11,6 +11,7 @@ from models.income import Income
 from models.expense import Expense
 from models.investment import Investment
 from models.loan import Loan
+from models.goal import Goal
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()

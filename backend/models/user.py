@@ -12,3 +12,4 @@ class User(Base):
     expenses = relationship("Expense", back_populates="user")
     investments = relationship("Investment", back_populates="user")
     loans = relationship("Loan", back_populates="user")
+    goals = relationship("Goal", back_populates="user")
